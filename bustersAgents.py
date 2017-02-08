@@ -266,11 +266,69 @@ class BasicAgentAA(BustersAgent):
         
     def chooseAction(self, gameState):
         self.countActions = self.countActions + 1
+        self.printInfo(gameState)
         move = Directions.STOP
         legal = gameState.getLegalActions(0) ##Legal position from the pacman
-        move_random = random.randint(0, 3)
-        if   ( move_random == 0 ) and Directions.WEST in legal:  move = Directions.WEST
-        if   ( move_random == 1 ) and Directions.EAST in legal: move = Directions.EAST
-        if   ( move_random == 2 ) and Directions.NORTH in legal:   move = Directions.NORTH
-        if   ( move_random == 3 ) and Directions.SOUTH in legal: move = Directions.SOUTH
+	
+	
+		 #for i in range(1, (gameState.getNumAgents()-1))
+	distancias=gameState.data.ghostDistances
+	
+	index=distancias.index(min(x for x in distancias if x is not None))
+		
+	pacx = gameState.getPacmanPosition()[0]
+	pacy = gameState.getPacmanPosition()[1]
+
+	pacdir = gameState.data.agentStates[0].getDirection()
+
+	gho = gameState.getGhostPositions()[index]
+	ghox = gho[0]
+	ghoy = gho[1]
+	
+        
+	legal=gameState.getLegalPacmanActions()
+	
+	length=len(legal)
+
+#COMENTARIO
+#La siguiente seccion esta explicada en la memoria	
+
+	#if (length<4):
+
+	#	x=10
+
+	#	if(x>0):
+
+	#		move_random = random.randint(0, 3)
+	#		if   ( move_random == 0 ) and Directions.WEST in legal:  move = Directions.WEST
+       	#		if   ( move_random == 1 ) and Directions.EAST in legal: move = Directions.EAST
+        #		if   ( move_random == 2 ) and Directions.NORTH in legal:   move = Directions.NORTH
+        #		if   ( move_random == 3 ) and Directions.SOUTH in legal: move = Directions.SOUTH
+	#		x=x-1
+	
+	
+	
+
+        if   ( pacx-ghox > 0 ):
+	 if (Directions.WEST in legal):  move = Directions.WEST
+	 #elif (pacdir=="WEST" and Directions.NORTH in legal):  move = Directions.NORTH
+	 #elif (pacdir=="WEST" and Directions.SOUTH in legal):  move = Directions.SOUTH
+
+
+        if   ( pacx-ghox < 0 ):
+	 if (Directions.EAST in legal):  move = Directions.EAST
+	 #elif (pacdir=="EAST" and Directions.NORTH in legal):  move = Directions.NORTH
+	 #elif (pacdir=="EAST" and Directions.SOUTH in legal):  move = Directions.SOUTH
+
+        if   ( pacy-ghoy < 0 ):
+	 if (Directions.NORTH in legal):  move = Directions.NORTH
+	 #elif (Directions.EAST in legal):  move = Directions.EAST
+	 #elif (Directions.WEST in legal):  move = Directions.WEST
+
+        if   ( pacy-ghoy > 0 ):
+	 if (Directions.SOUTH in legal):  move = Directions.SOUTH
+	 #elif (Directions.EAST in legal):  move = Directions.EAST
+	 #elif (Directions.WEST in legal):  move = Directions.WEST
+
+
         return move
