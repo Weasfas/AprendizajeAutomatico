@@ -610,7 +610,33 @@ class Game:
         agentIndex = self.startingIndex
         numAgents = len( self.agents )
         step = 0
-        fil=open("OutputData.txt","a")
+        fil=open("all_data_pacman.arff","a")
+        fil.write("@RELATION all_data_pacman\n\n
+        @ATTRIBUTE legal_actions_west {0, 1}\n
+        @ATTRIBUTE legal_actions_stop {0, 1}\n
+        @ATTRIBUTE legal_actions_east {0, 1}\n
+        @ATTRIBUTE legal_actions_north {0, 1}\n
+        @ATTRIBUTE legal_actions_south {0, 1}\n
+        @ATTRIBUTE ghost0_distance NUMERIC\n
+        @ATTRIBUTE ghost1_distance NUMERIC\n
+        @ATTRIBUTE ghost2_distance NUMERIC\n
+        @ATTRIBUTE ghost3_distance NUMERIC\n
+        @ATTRIBUTE pacman_direction {west,stop,east,north,south}\n
+        @ATTRIBUTE ghost0_direction {west,stop,east,north,south}\n
+        @ATTRIBUTE ghost1_direction {west,stop,east,north,south}\n
+        @ATTRIBUTE ghost2_direction {west,stop,east,north,south}\n
+        @ATTRIBUTE ghost3_direction {west,stop,east,north,south}\n
+        @ATTRIBUTE ghost0_x_position NUMERIC\n
+        @ATTRIBUTE ghost0_y_position NUMERIC\n
+        @ATTRIBUTE ghost1_x_position NUMERIC\n
+        @ATTRIBUTE ghost1_y_position NUMERIC\n
+        @ATTRIBUTE ghost2_x_position NUMERIC\n
+        @ATTRIBUTE ghost2_y_position NUMERIC\n
+        @ATTRIBUTE ghost3_x_position NUMERIC\n
+        @ATTRIBUTE ghost3_y_position NUMERIC\n
+        @ATTRIBUTE distance_nearest_dots NUMERIC\n\n
+        @DATA\n")
+        
         while not self.gameOver:
             # Fetch the next agent
             agent = self.agents[agentIndex]
@@ -731,5 +757,4 @@ class Game:
                     self.unmute()
                     return
         self.display.finish()
-        fil.write("\n---------------------------------------------------------------- End Game ----------------------------------------------------------------------------------------------------------------------------------------\n\n")
         fil.close()
