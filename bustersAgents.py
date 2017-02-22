@@ -261,8 +261,45 @@ class BasicAgentAA(BustersAgent):
         print "Score: ", gameState.getScore()
         
     def printLineData(self, gameState):
-        mensaje = "TICK: " + str(self.countActions) + ", Pacman position: " +  str(gameState.getPacmanPosition()) + ", Legal actions: " + str(gameState.getLegalPacmanActions()) + ", Living ghosts: " + str(gameState.getLivingGhosts()) + ", Ghosts positions: " + str(gameState.getGhostPositions()) + ", Ghosts distances: " + str(gameState.data.ghostDistances) + ", Distance nearest pac dots: " + str(gameState.getDistanceNearestFood()) +"\n" 
-        return mensaje
+        #mensaje = "TICK: " + str(self.countActions) + ", Pacman position: " +  str(gameState.getPacmanPosition()) + ", Legal actions: " + str(gameState.getLegalPacmanActions()) + ", Living ghosts: " + str(gameState.getLivingGhosts()) + ", Ghosts positions: " + str(gameState.getGhostPositions()) + ", Ghosts distances: " + str(gameState.data.ghostDistances) + ", Distance nearest pac dots: " + str(gameState.getDistanceNearestFood()) +"\n" 
+        array = gameState.getLegalPacmanActions()
+	mW=0
+	mE=0
+	mP=1
+	mN=0
+	mS=0
+	if ( "West" in array): mW = 1
+	if ( "East" in array): mE = 1
+	if ( "North" in array): mN = 1
+	if ( "South" in array): mS = 1
+	mensaje = str(mW) +
+	"," + str(mP) +
+	"," + str(mE) +
+	"," + str(mN) +
+	"," + str(mS) +
+	#distancia ghost
+	"," + str(gameState.data.ghostDistances(1)) +
+	"," + str(gameState.data.ghostDistances(2)) +
+	"," + str(gameState.data.ghostDistances(3)) +
+	"," + str(gameState.data.ghostDistances(4)) +
+	#pacman direction
+	"," + str(gameState.data.agentStates[0].getDirection()) +
+	#ghost direction
+	"," + str(gameState.getGhostDirections().get(0)) +
+	"," + str(gameState.getGhostDirections().get(1)) +
+	"," + str(gameState.getGhostDirections().get(2)) +
+	"," + str(gameState.getGhostDirections().get(3)) +
+	#ghost position
+	"," + str(gameState.getGhostPositions()[0][0]) +
+	"," + str(gameState.getGhostPositions()[0][1]) +
+	"," + str(gameState.getGhostPositions()[1][0]) +
+	"," + str(gameState.getGhostPositions()[1][1]) +
+	"," + str(gameState.getGhostPositions()[2][0]) +
+	"," + str(gameState.getGhostPositions()[2][1]) +
+	"," + str(gameState.getGhostPositions()[3][0]) +
+	"," + str(gameState.getGhostPositions()[3][1])
+	
+	return mensaje
         
     def chooseAction(self, gameState):
         self.countActions = self.countActions + 1
