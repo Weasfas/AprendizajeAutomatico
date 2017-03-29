@@ -230,6 +230,7 @@ class GreedyBustersAgent(BustersAgent):
         return Directions.EAST
 
 import math
+import random
 # NUESTRO AGENTE CON CLUSTERS PRACTICA2
 class ClusAgentAA(BustersAgent):
 
@@ -293,7 +294,7 @@ class ClusAgentAA(BustersAgent):
         gD=min (distancias)
         self.countActions = self.countActions + 1
         move = Directions.STOP
-        with open("C:\\Users\\David\\Desktop\\practica 2\\Centroides.txt", 'r') as f:
+        with open("C:\\Users\\a0330413\\Downloads\\Centroides.txt", 'r') as f:
          data = [map(str, line.split()) for line in f]
         vectorDistancia = []
         for j in range(len(data)):
@@ -315,57 +316,120 @@ class ClusAgentAA(BustersAgent):
          vectorDistancia.append(result)
         cluster=vectorDistancia.index(min(x for x in vectorDistancia if x is not None))
 
-        if(cluster==0 and "West" in array):
-          move = Directions.WEST
-        else:
-          move = Directions.EAST
+        print(cluster)
+        a=random.randint(1,100)
 
-        if (cluster==1 and "West" in array):
-          move = Directions.WEST
-        else:
-          move = Directions.EAST
+        if(cluster==0):
+          if("East" in array and a < 4):
+           return Directions.EAST
+          elif("West" in array and a >= 4 and a < 40):
+           return Directions.WEST
+          elif("South" in array and a>=40 and a < 71):
+           return Directions.SOUTH
+          elif("North" in array and a >= 71):
+           return Directions.NORTH
+          else:
+           return random.choice(array)
 
-        if (cluster==2 and "East" in array):
-          move = Directions.EAST
-        else:
-          move = Directions.WEST
+        if(cluster==1):
+          if("North" in array and a < 15):
+           return Directions.NORTH
+          elif("West" in array and a >= 15 and a < 67):
+           return Directions.WEST
+          elif("East" in array and a>=67):
+           return Directions.EAST
+          else:
+           return random.choice(array)
 
-        if (cluster==3 and "West" in array):
-          move = Directions.WEST
-        else:
-          move = Directions.EAST
+        if(cluster==2):
+          if("North" in array and a < 10):
+           return Directions.NORTH
+          elif("South" in array and a >= 10 and a < 20):
+           return Directions.SOUTH
+          elif("West" in array and a>=20 and a < 30):
+           return Directions.WEST
+          elif("East" in array and a >= 30):
+           return Directions.EAST
+          else:
+           return random.choice(array)
 
-        if (cluster==4 and "South" in array):
-           move = Directions.SOUTH
-        else:
-           move = Directions.NORTH
+        if(cluster==3):
+          if("North" in array and a < 22):
+           return Directions.NORTH
+          elif("East" in array and a>=22 and a < 44):
+           return Directions.EAST
+          elif("West" in array and a >= 44):
+           return Directions.WEST
+          else:
+           return random.choice(array)
 
-        if (cluster==5 and "South" in array):
-           move = Directions.SOUTH
-        else:
-           move = Directions.NORTH
+        if(cluster==4):
+         if("East" in array and a < 14):
+           return Directions.EAST
+         elif("West" in array and a >= 14 and a < 46):
+          return Directions.WEST
+         elif("South" in array and a>=46):
+          return Directions.SOUTH
+         else:
+          return random.choice(array)
 
-        if (cluster==6 and "East" in array):
-          move = Directions.EAST
-        else:
-          move = Directions.WEST
+        if(cluster==5):
+         if("East" in array and a < 25):
+           return Directions.EAST
+         elif("West" in array and a >= 25 and a < 49):
+          return Directions.WEST
+         elif("South" in array and a>=49 and a < 88):
+          return Directions.SOUTH
+         elif("North" in array and a >= 88):
+          return Directions.NORTH
+         else:
+          return random.choice(array)
 
-        if (cluster==7 and "West" in array):
-          move = Directions.WEST
-        else:
-          move = Directions.EAST
+        if(cluster==6):
+         if("East" in array and a < 39):
+           return Directions.EAST
+         elif("West" in array and a >= 39 and a < 42):
+          return Directions.WEST
+         elif("South" in array and a>=42 and a < 60):
+          return Directions.SOUTH
+         elif("North" in array and a >= 60):
+          return Directions.NORTH
+         else:
+          return random.choice(array)
 
-        if (cluster==8 and "South" in array):
-          move = Directions.SOUTH
-        else:
-          move = Directions.NORTH
+        if(cluster==7):
+         if("East" in array and a < 38):
+           return Directions.EAST
+         elif("West" in array and a >= 38 and a < 81):
+          return Directions.WEST
+         elif("North" in array and a >= 81):
+          return Directions.NORTH
+         else:
+          return random.choice(array)
 
-        if (cluster==9 and "East" in array):
-          move = Directions.EAST
-        else:
-          move = Directions.WEST
+        if(cluster==8):
+         if("East" in array and a < 22):
+           return Directions.EAST
+         elif("West" in array and a >= 22 and a < 46):
+          return Directions.WEST
+         elif("South" in array and a>=46 and a < 96):
+          return Directions.SOUTH
+         elif("North" in array and a >= 96):
+          return Directions.NORTH
+         else:
+          return random.choice(array)
 
-        return move
+        if(cluster==9):
+         if("East" in array and a < 30):
+           return Directions.EAST
+         elif("West" in array and a >= 30 and a < 43):
+          return Directions.WEST
+         elif("South" in array and a>=43 and a < 68):
+          return Directions.SOUTH
+         elif("North" in array and a >= 68):
+          return Directions.NORTH
+         else:
+           return random.choice(array)
 		#mensaje= "\t" + str(mW) + "," + str(mE) + "," + str(mN) + "," + str(mS) + "," + str(move1) + "," + str(move2) + "," + str(gD) + "," + str(gameState.getScore()) + "," + '\n' +'\t'
         #return mensaje + "----" + str(cluster)
 
