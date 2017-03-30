@@ -610,7 +610,11 @@ class Game:
         agentIndex = self.startingIndex
         numAgents = len( self.agents )
         step = 0
-        fil=open("OutputData.txt","a")
+	import os.path
+		
+
+        fil=open("almacen.arff","a")
+
         while not self.gameOver:
             # Fetch the next agent
             agent = self.agents[agentIndex]
@@ -701,7 +705,7 @@ class Game:
                 self.state = self.state.generateSuccessor( agentIndex, action )
             
             if agent == self.agents[0]:
-                fil.write(self.agents[0].printLineData(self.state))
+                fil.write(agent.evaluator(self.state))
                 
             # Change the display
             self.display.update( self.state.data )
@@ -731,5 +735,4 @@ class Game:
                     self.unmute()
                     return
         self.display.finish()
-        fil.write("\n---------------------------------------------------------------- End Game ----------------------------------------------------------------------------------------------------------------------------------------\n\n")
         fil.close()
