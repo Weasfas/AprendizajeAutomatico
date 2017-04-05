@@ -131,10 +131,15 @@ class QLearningAgent(ReinforcementAgent):
 		return random.choice(legalActions)
         return self.getPolicy(state)
 
-     def setQValue(self, state, action, value):
-        self.qvalues[(state, action)] = value
 
-     def update(self, state, action, nextState, reward):
+    def setQValue(self,state,action,value):
+        position = self.computePosition(state)
+        action_column = self.actions[action]
+
+        self.q_table[position][action_column]= value
+
+
+    def update(self, state, action, nextState, reward):
         """
           The parent class calls this to observe a
           state = action => nextState and reward transition.
@@ -152,15 +157,10 @@ class QLearningAgent(ReinforcementAgent):
 	  	Q(state,action) <- (1-self.alpha) Q(state,action) + self.alpha * (r + self.discount * max a' Q(nextState, a'))
 		
         """
-        alpha = self.alpha
-        desc = self.discount
-        qvalue = self.getQValue(state, action)
-        next_value = self.getValue(nextState)
-        
-        new_value = (1-alpha) * qvalue + alpha * (reward + desc * next_value)
-        
-        self.setQValue(state, action, new_value)
-    
+        "*** YOUR CODE HERE ***"
+        new_value = (1 - self.alpha) * self.getQValue(state,action) + self.alpha * (reward + self.discount * self.getValue(nextState))
+        self.setQValue(state,action,new_value)
+
     def getPolicy(self, state):
 	"Return the best action in the qtable for a given state"
         return self.computeActionFromQValues(state)
