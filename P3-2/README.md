@@ -1,2 +1,0 @@
-# AprendizajeAutomatico
-Prácticas Aprendizaje Automático
