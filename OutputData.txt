@@ -1,0 +1,32 @@
+TICK: 1, Pacman position: (12, 10), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [2], Distance nearest pac dots: 6
+TICK: 2, Pacman position: (13, 10), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [3], Distance nearest pac dots: 7
+TICK: 3, Pacman position: (14, 10), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [4], Distance nearest pac dots: 8
+TICK: 4, Pacman position: (14, 9), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [5], Distance nearest pac dots: 9
+TICK: 5, Pacman position: (14, 8), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [6], Distance nearest pac dots: 10
+TICK: 6, Pacman position: (14, 9), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [5], Distance nearest pac dots: 9
+TICK: 7, Pacman position: (14, 8), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [6], Distance nearest pac dots: 10
+TICK: 8, Pacman position: (14, 7), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [7], Distance nearest pac dots: 11
+TICK: 9, Pacman position: (13, 7), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [6], Distance nearest pac dots: 10
+TICK: 10, Pacman position: (13, 6), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [7], Distance nearest pac dots: 11
+TICK: 11, Pacman position: (12, 6), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [6], Distance nearest pac dots: 10
+TICK: 12, Pacman position: (12, 7), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [5], Distance nearest pac dots: 9
+TICK: 13, Pacman position: (11, 7), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [4], Distance nearest pac dots: 8
+TICK: 14, Pacman position: (11, 6), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [5], Distance nearest pac dots: 9
+TICK: 15, Pacman position: (11, 5), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [6], Distance nearest pac dots: 10
+TICK: 16, Pacman position: (11, 6), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [5], Distance nearest pac dots: 9
+TICK: 17, Pacman position: (11, 7), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [4], Distance nearest pac dots: 8
+TICK: 18, Pacman position: (11, 8), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [3], Distance nearest pac dots: 7
+TICK: 19, Pacman position: (10, 8), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [2], Distance nearest pac dots: 6
+TICK: 20, Pacman position: (10, 9), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [1], Distance nearest pac dots: 5
+TICK: 21, Pacman position: (11, 9), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [2], Distance nearest pac dots: 6
+TICK: 22, Pacman position: (11, 8), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [3], Distance nearest pac dots: 7
+TICK: 23, Pacman position: (10, 8), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [2], Distance nearest pac dots: 6
+TICK: 24, Pacman position: (10, 9), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [1], Distance nearest pac dots: 5
+TICK: 25, Pacman position: (11, 9), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [2], Distance nearest pac dots: 6
+TICK: 26, Pacman position: (11, 10), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [1], Distance nearest pac dots: 5
+TICK: 27, Pacman position: (11, 9), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [2], Distance nearest pac dots: 6
+TICK: 28, Pacman position: (10, 9), Legal actions: ['West', 'Stop', 'East', 'North', 'South'], Living ghosts: [False, True], Ghosts positions: [(10, 10)], Ghosts distances: [1], Distance nearest pac dots: 5
+TICK: 29, Pacman position: (10, 10), Legal actions: [], Living ghosts: [False, False], Ghosts positions: [(10, 10)], Ghosts distances: [None], Distance nearest pac dots: 4
+
+---------------------------------------------------------------- End Game ----------------------------------------------------------------------------------------------------------------------------------------
+
